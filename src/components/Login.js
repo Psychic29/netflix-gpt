@@ -9,6 +9,7 @@ import { auth } from "../utils/firebase";
 import Header from "./Header";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
+import { BG_IMG_URL } from "../utils/constants";
 
 const Login = () => {
   const dispatch = useDispatch();
@@ -83,7 +84,7 @@ const Login = () => {
         <Header />
         <img
           className="absolute h-screen w-full brightness-50"
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/ff5587c5-1052-47cf-974b-a97e3b4f0656/065df910-dec3-46ae-afa8-7ad2b52dce40/IN-en-20240506-popsignuptwoweeks-perspective_alpha_website_large.jpg"
+          src={BG_IMG_URL}
           alt="bg-img"
         />
         <div className="absolute h-full w-full flex justify-center items-center">
