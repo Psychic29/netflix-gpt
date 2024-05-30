@@ -7,9 +7,14 @@ export const API_OPTIONS = {
   method: "GET",
   headers: {
     accept: "application/json",
-    Authorization:
-      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhOWVjMTdlZGY4Yzg4MzRjZWUxM2U2ZjY3NGNkMDMzMSIsInN1YiI6IjY2NTcwNmJhZGFiNzdjY2E0ZTFjZmM3NSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.naqSO5cU3YkVRvlXvw0ioxYZGuZWe7GtW2UfZIatqrQ"
+    Authorization: "Bearer " + process.env.REACT_APP_TMDB_API_KEY
   }
 };
 
 export const IMG_CDN_URL = "https://image.tmdb.org/t/p/w500";
+
+export const SUPPORTED_LANGUAGES = [
+  { identifier: "en", name: "English" },
+  { identifier: "hindi", name: "Hindi" },
+  { identifier: "spanish", name: "Spanish" }
+];

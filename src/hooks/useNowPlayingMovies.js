@@ -1,10 +1,12 @@
 import { API_OPTIONS } from "../utils/constants";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addNowPlayingMovies } from "../utils/moviesSlice";
 import { useEffect } from "react";
 
 export const useNowPlayingMovies = () => {
   const dispatch = useDispatch();
+
+  const popularMovies = useSelector(store => store.movies.nowPlayingMovies);
 
   const getMoviesList = async () => {
     const data = await fetch(
@@ -17,7 +19,7 @@ export const useNowPlayingMovies = () => {
   };
 
   useEffect(() => {
-    getMoviesList();
+    !popularMovies && getMoviesList();
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
