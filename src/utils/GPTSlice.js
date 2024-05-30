@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const GPTSlice = createSlice({
   name: "GPT",
   initialState: {
-    showGPTSearch: true,
+    showGPTSearch: false,
     movieResults: null,
     movieNames: null
   },
